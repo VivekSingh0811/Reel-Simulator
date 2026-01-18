@@ -472,7 +472,7 @@ def create_template_video(
         '-map', '[vout]',
         '-map', '0:a?',
         '-c:v', 'libx264',
-        '-preset', 'fast',
+        '-preset', 'ultrafast',
         '-crf', '23',
         '-c:a', 'aac',
         '-shortest',
