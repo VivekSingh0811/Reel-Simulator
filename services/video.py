@@ -261,7 +261,7 @@ def create_text_overlay(
     body_height = len(body_lines) * line_height if body_lines else 0
     
     box_x1 = box_margin
-    box_y1 = 80
+    box_y1 = 180
     box_x2 = TEMPLATE_WIDTH - box_margin
     box_y2 = box_y1 + title_height + body_height + (box_padding_y * 2)
     
@@ -320,8 +320,8 @@ def create_text_overlay(
     try:
         if LOGO_PATH.exists():
             logo = Image.open(LOGO_PATH).convert('RGBA')
-            # Scale logo to fit nicely (max 80px height)
-            logo_max_height = 80
+            # Scale logo to fit nicely (max 150px height)
+            logo_max_height = 240
             if logo.height > logo_max_height:
                 ratio = logo_max_height / logo.height
                 logo = logo.resize((int(logo.width * ratio), logo_max_height), Image.LANCZOS)
